@@ -14,11 +14,14 @@
 <body ng-app="TylerButh" ng-controller="iController">
 
 <header>
-    <h1><img src="_/img/tyler_buth.png" /></h1>
-    <div id="location-time">
-        <span class="current-location">My Location: <b>Bangkok, Thailand</b></span>
-        <span class="current-time">My Time: <b><time current-time></time></b></span>
+    <div class="location-time-container">
+        <div id="location-time">
+            <span class="current-location"><span class="name">My Location: </span><b>Bangkok, Thailand</b></span>
+            <span class="current-time"><span class="name">My Time: </span><b><time current-time></time></b></span>
+        </div>
     </div>
+    <h1><img src="_/img/tyler_buth.png" /></h1>
+
     <video autoplay loaded-data loop poster="_/img/bg.jpg" id="bgvid">
         <source src="_/vid/bg.webm" type="video/webm" />
         <source src="_/vid/bg.mp4" type="video/mp4" />
@@ -31,7 +34,9 @@
     <section class="info">
         <div class="container">
             <h2><img src="_/img/info.png" /></h2>
-            <div class="click-resume"><a href="_/doc/TylerButh-Resume.docx">Click here to download full <b>Resume</b> / <b>CV</b></a></div>
+            <div class="click-resume">
+                <a href="_/doc/TylerButh-Resume.docx"><span class="hidden-xs">Click here to download full </span><b>Resume</b> / <b>CV</b></a>
+            </div>
             <div class="row">
                 <div class="col-sm-6">
                     <dl>
@@ -56,7 +61,7 @@
     </section>
     <section class="experience">
         <div class="container">
-            <h2><img src="_/img/experience.png" /></h2>
+            <h2 class="experience-title"><img src="_/img/experience.png" /></h2>
             <div class="click-skill" ng-if="curSkillKey == 0">Click any of the skills to filter the portfolio.</div>
             <div class="click-skill" ng-if="curSkillKey > 0">Click the skill again to unselect it.</div>
             <div class="row skills">
@@ -102,9 +107,10 @@
                 <p>{{ curSkillDesc }}</p>
             </div>
             <div class="item clearfix" ng-repeat="(key, project) in portfolio" ng-if="curSkillKey == 0 || project.skills[curSkill]">
+                <h4 class="visible-xs">{{ project.name }}</h4>
                 <figure><img ng-src="/portfolio/{{ project.folder }}/figure.jpg" /></figure>
                 <div class="details">
-                    <h4>{{ project.name }}</h4>
+                    <h4 class="hidden-xs">{{ project.name }}</h4>
                     <nav class="item-skills">
                         <span ng-repeat="(skill, desc) in project.skills">
                             <a href ng-class="{true: 'selected'}[(curSkill == skill && !project.selectedSkill) || project.selectedSkill == skill]" ng-click="changeProjectSkill(key, skill)">{{ skill | uppercase }}</a>

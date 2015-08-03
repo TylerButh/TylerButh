@@ -198,23 +198,74 @@ h1 {
     margin: 10px 0px;
 }
 #content .portfolio .item figure {
+    border: 3px solid #2e4145;
     float: left;
-    padding: 5px;
+    margin: 5px;
 }
 #content .portfolio .item img {
-    border: 3px solid #2e4145;
     height: 150px;
     width: 340px;
 }
 #content .portfolio .item .details {
     margin: 0px 15px 5px 365px;
 }
-#content .portfolio .item .details h4 {
+#content .portfolio .item h4 {
     color: #c8ccb0;
     font-family: Calibri;
     font-size: 30px;
     font-weight: bold;
     margin: 5px 0px 0px;
+}
+@media (max-width: 375px) {
+    .experience-title img {
+        width: 100%;
+    }
+}
+@media (max-width: 405px) {
+    #content .portfolio .item figure img {
+        width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .current-location .name {
+        display: none;
+    }
+    .current-time .name {
+        display: none;
+    }
+}
+@media (max-width: 560px) {
+    h1 img {
+        padding: 0px 10px;
+        width: 100%;
+    }
+
+}
+@media (max-width: 767px) {
+    .location-time-container {
+        text-align: center;
+    }
+    h1 {
+        position: static;
+        text-align: center;
+    }
+    #location-time {
+        display: inline-block;
+        position: static;
+        margin: 15px auto;
+        text-align: center;
+    }
+    #content .portfolio .item figure {
+        height: 75px;
+        overflow: hidden;
+    }
+    #content .portfolio .item .details {
+        clear: left;
+        margin: 0px 10px 5px;
+    }
+    #content .portfolio .item h4 {
+        padding: 5px 10px;
+    }
 }
 #content .portfolio .item .details nav {
     color: #2e4141;
@@ -236,7 +287,7 @@ h1 {
     color: #999e7d;
     font-family: Calibri;
     font-size: 14px;
-    margin: 15px 0px 30px;
+    margin: 15px 15px 30px;
     text-align: center;
 }
 #main-footer a {
