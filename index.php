@@ -7,6 +7,7 @@
     <script src="_/js/angular-strap.min.js"></script>
     <script src="_/js/angular-strap.tpl.min.js"></script>
     <script src="_/js/master.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" href="/_/img/favicon.png">
     <title>Tyler Buth</title>
 </head>
@@ -18,9 +19,10 @@
         <span class="current-location">My Location: <b>Bangkok, Thailand</b></span>
         <span class="current-time">My Time: <b><time current-time></time></b></span>
     </div>
-    <video autoplay loaded-data loop poster="bg.jpg" id="bgvid">
+    <video autoplay loaded-data loop poster="_/img/bg.jpg" id="bgvid">
         <source src="_/vid/bg.webm" type="video/webm" />
         <source src="_/vid/bg.mp4" type="video/mp4" />
+        <img src="_/img/bg.jpg" />
         <!--TESTING PURPOSES<source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm" />-->
     </video>
     <div id="fade"></div>
