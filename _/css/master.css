@@ -176,6 +176,7 @@ h1 {
 }
 #content .portfolio .title {
     background-color: #192626;
+    padding: 5px;
 }
 #content .portfolio .title h3 {
     color: #80866b;
@@ -183,15 +184,14 @@ h1 {
     font-family: Calibri;
     font-size: 30px;
     font-weight: bold;
-    line-height: 50px;
     margin: 0px;
-    padding: 0px 20px;
+    padding: 0px 15px;
 }
 #content .portfolio .title p {
     color: #c8ccb0;
     display: inline-block;
-    line-height: 50px;
     margin: 0px;
+    padding: 8px 15px;
 }
 #content .portfolio .item {
     background-color: #192626;

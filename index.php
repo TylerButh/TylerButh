@@ -4,8 +4,6 @@
     <link rel="stylesheet" type="text/css" href="_/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="_/css/master.css">
     <script src="_/js/angular.min.js"></script>
-    <script src="_/js/angular-strap.min.js"></script>
-    <script src="_/js/angular-strap.tpl.min.js"></script>
     <script src="_/js/master.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" href="/_/img/favicon.png">
@@ -26,7 +24,6 @@
         <source src="_/vid/bg.webm" type="video/webm" />
         <source src="_/vid/bg.mp4" type="video/mp4" />
         <img src="_/img/bg.jpg" />
-        <!--TESTING PURPOSES<source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm" />-->
     </video>
     <div id="fade"></div>
 </header>
@@ -62,7 +59,7 @@
     <section class="experience">
         <div class="container">
             <h2 class="experience-title"><img src="_/img/experience.png" /></h2>
-            <div class="click-skill" ng-if="curSkillKey == 0">Click any of the skills to filter the portfolio.</div>
+            <div class="click-skill" ng-if="curSkillKey == 0">Click a skill to filter the portfolio.</div>
             <div class="click-skill" ng-if="curSkillKey > 0">Click the skill again to unselect it.</div>
             <div class="row skills">
                 <div class="col-md-3 skill-4">

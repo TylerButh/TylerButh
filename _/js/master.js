@@ -3,12 +3,14 @@ var app = angular.module('TylerButh', []);
 /** Directive: currentTime
   * Adds the current time in Bangkok and updates it every 5 seconds
   */
-app.directive('currentTime', ['$interval','dateFilter',function ($interval, dateFilter) {
+function currentTime ($interval, dateFilter) {
 	return function(scope, element, attrs) {
 		element.text(dateFilter(new Date(), 'EEEE, h:mm a', '+0700'));
 		$interval(function () { element.text(dateFilter(new Date(), 'EEEE, h:mm a', '+0700')); }, 5000);
     };
-}])
+}
+currentTime.$inject = ['$interval','dateFilter'];
+app.directive('currentTime',currentTime);
 
 /** Function: compareSkills
   * Compares the skills array
@@ -30,8 +32,8 @@ function compareSkills(a,b) {
 /** Controller: iController
   * Manages the skills and portfolio
   */
-app.controller('iController', ['$http', '$scope', function ($http, $scope) {
 
+function iController($http, $scope) {
 	// get a list of projects
 	$http.get('/rest/get_portfolio.php').
 	  success(function(data) {
@@ -73,4 +75,6 @@ app.controller('iController', ['$http', '$scope', function ($http, $scope) {
 			$scope.portfolio[key].selectedSkill = skill;
 		}
 	}
-}])
+}
+iController.$inject = ['$http', '$scope'];
+app.controller('iController',iController);
