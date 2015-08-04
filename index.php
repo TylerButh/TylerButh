@@ -6,8 +6,18 @@
     <script src="_/js/angular.min.js"></script>
     <script src="_/js/master.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="icon" type="image/png" href="/_/img/favicon.png">
     <title>Tyler Buth</title>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59479356-2', 'auto');
+      ga('send', 'pageview');
+    </script>
 </head>
 <body ng-app="TylerButh" ng-controller="iController">
 
@@ -18,19 +28,19 @@
             <span class="current-time"><span class="name">My Time: </span><b><time current-time></time></b></span>
         </div>
     </div>
-    <h1><img src="_/img/tyler_buth.png" /></h1>
+    <h1><img src="_/img/tyler_buth.png" alt="Tyler Buth"/></h1>
 
     <video autoplay loaded-data loop poster="_/img/bg.jpg" id="bgvid">
         <source src="_/vid/bg.webm" type="video/webm" />
         <source src="_/vid/bg.mp4" type="video/mp4" />
-        <img src="_/img/bg.jpg" />
+        <img src="_/img/bg.jpg" alt="" />
     </video>
     <div id="fade"></div>
 </header>
 <main id="content">
     <section class="info">
         <div class="container">
-            <h2><img src="_/img/info.png" /></h2>
+            <h2><img src="_/img/info.png" alt="Info" /></h2>
             <div class="click-resume">
                 <a href="_/doc/TylerButh-Resume.docx"><span class="hidden-xs">Click here to download full </span><b>Resume</b> / <b>CV</b></a>
             </div>
@@ -58,7 +68,7 @@
     </section>
     <section class="experience">
         <div class="container">
-            <h2 class="experience-title"><img src="_/img/experience.png" /></h2>
+            <h2 class="experience-title"><img src="_/img/experience.png" alt="Experience" /></h2>
             <div class="click-skill" ng-if="curSkillKey == 0">Click a skill to filter the portfolio.</div>
             <div class="click-skill" ng-if="curSkillKey > 0">Click the skill again to unselect it.</div>
             <div class="row skills">
@@ -105,7 +115,7 @@
             </div>
             <div class="item clearfix" ng-repeat="(key, project) in portfolio" ng-if="curSkillKey == 0 || project.skills[curSkill]">
                 <h4 class="visible-xs">{{ project.name }}</h4>
-                <figure><img ng-src="/portfolio/{{ project.folder }}/figure.jpg" /></figure>
+                <figure><img ng-src="/portfolio/{{ project.folder }}/figure.jpg" alt="{{ project.name }} Screenshot" /></figure>
                 <div class="details">
                     <h4 class="hidden-xs">{{ project.name }}</h4>
                     <nav class="item-skills">
