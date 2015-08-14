@@ -115,6 +115,16 @@
         'description' => 'I have messed around with Node.js and Socket.io as well as Express and a few Node.js addons to get an idea of the capability of Node.js.',
         'level' => 4
     );
+    $skills[] = array(
+        'name' => 'Ruby',
+        'description' => 'I have only had a chance to start looking at it and take a few tutorials on Code Academy.',
+        'level' => 4
+    );
+    $skills[] = array(
+        'name' => 'Python',
+        'description' => 'I have only had a chance to start looking at it and take a few tutorials on Code Academy.',
+        'level' => 4
+    );
 
 
 
